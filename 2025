@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Seto Family Vacations</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/jpg" href="/images/favicon.png"/>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">2015
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2015.html">2015</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2016
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2016.html">2016</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2017
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2017.html">2017</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2018
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2018.html">2018</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2019
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2019.html">2019</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2020
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2020.html">2020</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2021
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2021.html">2021</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2022
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2022.html">2022</a>
+      </div>
+    </div>
+    
+    
+    <div class="dropdown">
+      <button class="dropbtn">2023
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2023.html">2023</a>
+        <a href="https://family-vacations.aaronmatthewset.repl.co/2023.html#Oregon2023">Oregon</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2024
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2024.html">2024</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">2025
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="2025.html">2025</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Search
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="search.html">Search</a>
+      </div>
+    </div>
+  </div>
+
+<center>
+
+  <h1>2025</h1>
+  <p>In 2025, we went to many places and experienced new and fun things.</p>
+  <br>
+  <h2 id="NYhalfmoonbay2023">New Year's - Half Moon Bay</h2>
+  <p>For New Year's, we went to Half Moon Bay. It's my first time staying up all the way to midnight!</p>
+  <br>
+  <img src="2023images/NewYear2023.JPG" alt="New Year's 2023" ">
+  <br>
+  <h2 id="LAWB2023">Winter Break - LA</h2>
+  <p>For winter break/ski week, we went to LA. We visited some colleges, Dodger Stadium, the Warner Bro Studio, and family.</p>
+  <br>
+  <img src="2023images/DodgerStadium12023.JPG" alt="Dodger Stadium Pic 1" ">
+  <img src="2023images/DodgerStadium22023.JPG" alt="Dodger Stadium Pic 2" ">
+  <img src="2023images/FriendscouchWB2023.JPG" alt="The Famous Friends Couch" ">
+  <br>
+  <h2 id="Safariwest2023">Spring Break - Safari West</h2>
+  <p>For spring break, we went to Safari West! We saw so many cool animals. The giraffes and bearded monkeys were so cute!</p>
+  <br>
+  <img src="2023images/SafariWest2023.JPG" alt="Safari West" ">
+  <img src="2023images/PigSW.JPG" alt="Super Cute Pig" ">
+  <img src="2023images/BeardedmonkeySW.JPG" alt="Bearded Monkay!" ">
+  <br>
+  <h2 id="Oregon2023">Summer Vacation - Oregon</h2>
+  <p>One of the biggest trips of the year was our roadtrip to Oregon. It was a ton of fun. We saw Crater Lake which was beautiful, Shasta Dam, the Harry and David factory, University of Oregon, and Oregon State University.</p>
+  <br>
+  <img src="2023images/Craterlake2023.JPG" alt="Crater Lake" ">
+  <img src="2023images/ShastaDam2023.JPG" alt="Shasta Dam" ">
+  <img src="2023images/HarryandDavid2023.JPG" alt="Harry and David Factory" ">
+  <br>
+  <h2 id="Samanthagraduation2023">Samantha Graduation Trip + Beach</h2>
+  <p>In the summer, we went down to LA for Samantha's high school graduation. We also went to the beach.</p>
+  <br>
+  <img src="2023images/Laihousesummer2023.JPG" alt="Lai House Summer 2023" ">
+  <img src="2023images/Summerbeach2023.JPG" alt="Summer Beach 2023" ">
+  <img src="2023images/Setofamily2023sand.JPG" alt="Seto Family Sand 2023" ">
+  <br>
+  <h2 id="Greatwolflodge2023">Great Wolf Lodge</h2>
+  <p>In October we went to Great Wolf Lodge! It's an indoor water park. We also stayed at their hotel. The flower petal tube ride was incredible!</p>
+  <br>
+  <img src="2023images/GreatWolfLodge1.jpg" alt="Great Wolf Lodge 1" ">
+  <img src="2023images/GreatWolfLodge2.JPG" alt="Great Wolf Lodge 2" ">
+  <br>
+  <h2 id="Lasvegas2023">Thanksgiving Break - Las Vegas</h2>
+  <p>For Thanksgiving break, we went to Las Vegas! We saw a ton of things including the Sphere, the Strat, the Las Vegas Sign, the Neon Museum, Red Rock Canyon, Zion National Park, and Mat Franco the magician. We stayed at the Luxor.</p>
+  <br>
+  <img src="2023images/LVsign2023.JPG" alt="Las Vegas Sign" ">
+  <img src="2023images/LVstrat2023.JPG" alt="Las Vegas Strat" ">
+  <img src="2023images/LVzion2023.JPG" alt="Zion National Park" ">
+  <br>
+  <h2 id="LA2023">Holiday Break - LA and Mexico</h2>
+  <p>For Holiday break, we went to Los Angeles! We celebrated Christmas with our cousins and family. We also went on a 3 day Carnival cruise to Ensenada, Mexico with our cousins and family.</p>
+  <br>
+  <img src="2023images/LAtrip2023fam.JPG" alt="Extended Seto Family" ">
+  <img src="2023images/LAcruise2023fam.JPG" alt="LA Cruise to Mexico" ">
+  <br>
+
+  <a href="2024.html">Back to the Top</a>
+  <br>
+  <br>
+  <p><small><small>&copy; 2025 Seto Family</small></small></p>
+
+</center>
+
+</body>
