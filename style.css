@@ -246,6 +246,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; /* Or 'center' if you want them centered when fewer items fill the last row */
+    align-items: stretch;
 }
 
 #myUL li {
@@ -253,28 +254,28 @@ html {
     /* We subtract margin to prevent overflow. If margin is 5px on all sides (total 10px per item width), then subtract 10px */
     flex: 1 1 calc(20% - 10px); /* 5 columns: (100% / 5) - (2 * margin-value) */
     min-width: 100px; /* Set a minimum width to prevent them from becoming too small */
-
-    /* REMOVE STYLES THAT MAKE IT A VISUAL BOX FROM LI */
-    /* margin: 5px; - We'll put this on the A tag if needed, or use gap on UL */
-    /* text-align: center; - Move to A tag */
-    /* background-color: #f9f9f9; - Move to A tag */
-    /* border: 1px solid #ddd; - Move to A tag */
-    /* border-radius: 5px; - Move to A tag */
-
-    /* The LI itself still needs box-sizing if you're setting width/flex-basis */
+    margin: 5px; /* Margin around each list item */
     box-sizing: border-box;
 
-    /* If you still want a visual separation between LIs using margins: */
-    /* The space between the boxes will now be the margin of the LI */
-    margin: 5px; /* This margin will NOT be clickable. If you want it clickable, use padding on UL and no LI margins. */
+    /* --- KEY ADDITION HERE --- */
+    display: flex; /* Make LI a flex container itself */
+    flex-direction: column; /* Its children (the 'a' tag) will stack vertically (though only one child here) */
 }
 
+
 #myUL li a {
-    display: block; /* Makes the A tag fill its parent LI */
+    display: flex; /* Makes the A tag fill its parent LI */
+    flex-direction: column; /* Content inside the link (text) will stack if needed */
+    justify-content: center; /* Vertically center the text within the link */
+    align-items: center; /* Horizontally center the text within the link */
+
+    flex-grow: 1; /* <-- THIS IS THE CRUCIAL PART FOR 'a' */
+                 /* Makes the 'a' tag expand to fill all available space within its parent 'li' */
+
     text-decoration: none;
     color: #333;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    box-sizing: border-box; /* Important for padding/border calcs on A tag */
+    box-sizing: border-box;
 
     /* --- MOVE ALL VISUAL BOX STYLING FROM LI TO A TAG --- */
     background-color: #f9f9f9; /* Item background */
