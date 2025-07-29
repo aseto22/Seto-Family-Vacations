@@ -231,79 +231,91 @@ html {
     box-shadow: 0 2px 8px rgba(0,123,255,0.2);
 }
 
-/* YOU'LL MODIFY THESE SECTIONS */
+/* --- MODIFIED SECTIONS FOR 5 COLUMNS AND SMALLER BOXES --- */
 
 #myUL {
     list-style-type: none;
-    padding: 0;
+    padding: 10px; /* Padding inside the UL */
     margin: 0;
     width: 100%;
-    max-width: 800px; /* INCREASE MAX-WIDTH to allow for more columns */
+    max-width: 1000px; /* Increased max-width for 5 columns */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 
-    /* --- FLEXBOX PROPERTIES ADDED HERE --- */
-    display: flex; /* Makes the UL a flex container */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    justify-content: flex-start; /* Aligns items from the start */
-    /* gap: 10px; /* Optional: Adds space between flex items (newer CSS) */
-    padding: 10px; /* Add some padding inside the UL so items aren't stuck to edges */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Or 'center' if you want them centered when fewer items fill the last row */
 }
 
 #myUL li {
-    /* REMOVE border-bottom here if you want individual boxes */
-    /* border-bottom: 1px solid #eee; */ /* Remove if you want distinct boxes */
-    flex: 1 1 calc(33.333% - 20px); /* Adjust width for 3 columns (e.g., 33.333% minus gap) */
-    /* OR for simpler, less precise control: */
-    /* width: calc(33.333% - 20px); */ /* Example: For roughly 3 columns with margins */
-    min-width: 150px; /* Ensure items don't get too small */
-    margin: 5px; /* Adds space around each list item */
-    text-align: center; /* Center the text within each item */
-    background-color: #f9f9f9; /* Slightly different background for individual items */
-    border: 1px solid #ddd; /* Border for each item */
-    border-radius: 5px; /* Rounded corners for each item */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
+    /* flex-basis for 5 columns (100% / 5 = 20%) */
+    /* We subtract margin to prevent overflow. If margin is 5px on all sides (total 10px per item width), then subtract 10px */
+    flex: 1 1 calc(20% - 10px); /* 5 columns: (100% / 5) - (2 * margin-value) */
+    min-width: 100px; /* Set a minimum width to prevent them from becoming too small */
+    margin: 5px; /* Adjust margin as desired, consistent with the calc above */
 
-#myUL li:last-child {
-    border-bottom: none; /* No longer relevant if individual items have borders */
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Essential for accurate width calculation */
 }
 
 #myUL li a {
-    display: block; /* Keep this to make the whole area clickable */
-    padding: 10px 15px; /* Adjust padding for better fit in smaller boxes */
+    /* Smaller padding to make the boxes visually smaller */
+    padding: 8px 10px; /* Reduced padding */
+    font-size: 0.9em; /* Optionally make font slightly smaller */
+    display: block;
     text-decoration: none;
     color: #333;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #myUL li a:hover {
-    background-color: #e0e0e0; /* Hover effect */
+    background-color: #e0e0e0;
     color: #0056b3;
-    transform: translateY(-2px); /* Subtle lift on hover */
+    transform: translateY(-2px);
 }
 
-/* Optional: To hide filtered items smoothly (from previous example) */
+/* Optional: To hide filtered items smoothly */
 #myUL li[style*="display: none"] {
     opacity: 0;
     height: 0;
-    margin: 0; /* Also hide margin when hidden */
-    padding: 0; /* Also hide padding when hidden */
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     transition: opacity 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
 
-/* RESPONSIVENESS (Crucial for multi-column layouts) */
-@media (max-width: 768px) {
+/* --- RESPONSIVENESS (Adjust breakpoints and columns as needed) --- */
+@media (max-width: 1200px) { /* Adjust this breakpoint if you want 5 columns on larger screens too */
     #myUL li {
-        flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+        flex: 1 1 calc(20% - 10px); /* Keep 5 columns if viewport allows */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 992px) { /* For medium desktops/large tablets */
     #myUL li {
-        flex: 1 1 calc(100% - 10px); /* 1 column on small screens */
+        flex: 1 1 calc(25% - 10px); /* 4 columns */
+    }
+}
+
+@media (max-width: 768px) { /* For tablets */
+    #myUL li {
+        flex: 1 1 calc(33.333% - 10px); /* 3 columns */
+    }
+}
+
+@media (max-width: 576px) { /* For smaller tablets / large phones */
+    #myUL li {
+        flex: 1 1 calc(50% - 10px); /* 2 columns */
+    }
+}
+
+@media (max-width: 400px) { /* For small phones */
+    #myUL li {
+        flex: 1 1 calc(100% - 10px); /* 1 column */
         margin: 5px 0; /* Adjust margin for single column */
     }
 }
