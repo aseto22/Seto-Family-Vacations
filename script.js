@@ -5,24 +5,21 @@ var noResultsMessage = document.getElementById("noResultsMessage"); // Make sure
 
 // Main function to perform the search and filter list
 function myFunction() {
-    var filter, ul, li, a, i, txtValue;
-    var visibleCount = 0; // Counter for visible items
-
-    filter = myInput.value.toUpperCase(); // Use the global myInput reference
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
-
-    // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = ""; // Show the item
-            visibleCount++; // Increment count if item is visible
+            li[i].style.display = "";
         } else {
-            li[i].style.display = "none"; // Hide the item
+            li[i].style.display = "none";
         }
     }
+} 
 
     // --- NEW LOGIC FOR "NO RESULTS FOUND" MESSAGE ---
     // Show/hide the "No results found" message based on visibleCount
