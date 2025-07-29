@@ -205,34 +205,141 @@ html {
 }
 
 
+/* New Updated Code */
 /* Styles for the search container div */
 .search-container {
-    /* Example styles: */
-    position: relative; /* Important if you want to absolutely position an icon inside */
-    width: 100%; /* Take full width of its parent */
-    max-width: 400px; /* Limit its maximum width */
-    margin-bottom: 20px; /* Space below the search bar */
-    /* You can add padding, borders, shadows, etc., to the container itself */
-} 
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
 
 /* Styles for the input field itself, *inside* the container */
 #myInput {
-    width: 100%; /* Make the input fill its container */
-    padding: 12px 20px; /* Top/bottom and left/right padding */
+    width: 100%;
+    padding: 12px 20px;
     border: 1px solid #ccc;
-    border-radius: 25px; /* Rounded corners */
+    border-radius: 25px;
     font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
-    outline: none; /* Remove default focus outline */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #myInput:focus {
-    border-color: #007bff; /* Blue border on focus */
-    box-shadow: 0 2px 8px rgba(0,123,255,0.2); /* More prominent shadow on focus */
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.2);
 }
 
-/* You would also style your ul and li elements here */
+/* YOU'LL MODIFY THESE SECTIONS */
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px; /* INCREASE MAX-WIDTH to allow for more columns */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    /* --- FLEXBOX PROPERTIES ADDED HERE --- */
+    display: flex; /* Makes the UL a flex container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: flex-start; /* Aligns items from the start */
+    /* gap: 10px; /* Optional: Adds space between flex items (newer CSS) */
+    padding: 10px; /* Add some padding inside the UL so items aren't stuck to edges */
+}
+
+#myUL li {
+    /* REMOVE border-bottom here if you want individual boxes */
+    /* border-bottom: 1px solid #eee; */ /* Remove if you want distinct boxes */
+    flex: 1 1 calc(33.333% - 20px); /* Adjust width for 3 columns (e.g., 33.333% minus gap) */
+    /* OR for simpler, less precise control: */
+    /* width: calc(33.333% - 20px); */ /* Example: For roughly 3 columns with margins */
+    min-width: 150px; /* Ensure items don't get too small */
+    margin: 5px; /* Adds space around each list item */
+    text-align: center; /* Center the text within each item */
+    background-color: #f9f9f9; /* Slightly different background for individual items */
+    border: 1px solid #ddd; /* Border for each item */
+    border-radius: 5px; /* Rounded corners for each item */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#myUL li:last-child {
+    border-bottom: none; /* No longer relevant if individual items have borders */
+}
+
+#myUL li a {
+    display: block; /* Keep this to make the whole area clickable */
+    padding: 10px 15px; /* Adjust padding for better fit in smaller boxes */
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#myUL li a:hover {
+    background-color: #e0e0e0; /* Hover effect */
+    color: #0056b3;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Optional: To hide filtered items smoothly (from previous example) */
+#myUL li[style*="display: none"] {
+    opacity: 0;
+    height: 0;
+    margin: 0; /* Also hide margin when hidden */
+    padding: 0; /* Also hide padding when hidden */
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+/* RESPONSIVENESS (Crucial for multi-column layouts) */
+@media (max-width: 768px) {
+    #myUL li {
+        flex: 1 1 calc(50% - 20px); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #myUL li {
+        flex: 1 1 calc(100% - 10px); /* 1 column on small screens */
+        margin: 5px 0; /* Adjust margin for single column */
+    }
+}
+
+
+
+/* 2nd Old Code */
+/*
+/* Styles for the search container div
+.search-container {
+    /* Example styles: 
+    position: relative; /* Important if you want to absolutely position an icon inside 
+    width: 100%; /* Take full width of its parent 
+    max-width: 400px; /* Limit its maximum width 
+    margin-bottom: 20px; /* Space below the search bar 
+    /* You can add padding, borders, shadows, etc., to the container itself 
+} 
+
+/* Styles for the input field itself, *inside* the container 
+#myInput {
+    width: 100%; /* Make the input fill its container 
+    padding: 12px 20px; /* Top/bottom and left/right padding 
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded corners 
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow 
+    outline: none; /* Remove default focus outline 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions 
+}
+
+#myInput:focus {
+    border-color: #007bff; /* Blue border on focus 
+    box-shadow: 0 2px 8px rgba(0,123,255,0.2); /* More prominent shadow on focus 
+}
+
+/* You would also style your ul and li elements here 
 #myUL {
     list-style-type: none;
     padding: 0;
@@ -263,8 +370,12 @@ html {
 #myUL li a:hover {
     background-color: #f0f0f0;
     color: #007bff;
-}
+} */
 
+
+
+
+     
 /* Original code */
 /*
 #myInput {
