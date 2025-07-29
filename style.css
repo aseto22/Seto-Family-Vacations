@@ -253,23 +253,45 @@ html {
     /* We subtract margin to prevent overflow. If margin is 5px on all sides (total 10px per item width), then subtract 10px */
     flex: 1 1 calc(20% - 10px); /* 5 columns: (100% / 5) - (2 * margin-value) */
     min-width: 100px; /* Set a minimum width to prevent them from becoming too small */
-    margin: 5px; /* Adjust margin as desired, consistent with the calc above */
 
-    text-align: center;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Essential for accurate width calculation */
+    /* REMOVE STYLES THAT MAKE IT A VISUAL BOX FROM LI */
+    /* margin: 5px; - We'll put this on the A tag if needed, or use gap on UL */
+    /* text-align: center; - Move to A tag */
+    /* background-color: #f9f9f9; - Move to A tag */
+    /* border: 1px solid #ddd; - Move to A tag */
+    /* border-radius: 5px; - Move to A tag */
+
+    /* The LI itself still needs box-sizing if you're setting width/flex-basis */
+    box-sizing: border-box;
+
+    /* If you still want a visual separation between LIs using margins: */
+    /* The space between the boxes will now be the margin of the LI */
+    margin: 5px; /* This margin will NOT be clickable. If you want it clickable, use padding on UL and no LI margins. */
 }
 
 #myUL li a {
-    /* Smaller padding to make the boxes visually smaller */
-    padding: 8px 10px; /* Reduced padding */
-    font-size: 0.9em; /* Optionally make font slightly smaller */
-    display: block;
+    display: block; /* Makes the A tag fill its parent LI */
     text-decoration: none;
     color: #333;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Important for padding/border calcs on A tag */
+
+    /* --- MOVE ALL VISUAL BOX STYLING FROM LI TO A TAG --- */
+    background-color: #f9f9f9; /* Item background */
+    border: 1px solid #ddd; /* Item border */
+    border-radius: 5px; /* Item rounded corners */
+    text-align: center; /* Center the text inside the clickable box */
+    padding: 8px 10px; /* Internal padding */
+    font-size: 0.9em; /* Font size */
+
+    /* Optional: Remove any padding/margin from li if you want the link to fill the LI entirely */
+    /* If you want the clickable area to be larger than the visual box (e.g., fill the flex gap),
+       you might use padding on the LI and negative margin on the A, but that's more complex.
+       For now, this makes the visual box defined by A tag fully clickable. */
+
+    /* Added these if you removed margin from LI and want A to handle it (though less common for flex items) */
+    /* If you keep margin on LI, then the clickable area is just the A's box within the LI's margin */
+    /* margin: 5px; */
 }
 
 #myUL li a:hover {
