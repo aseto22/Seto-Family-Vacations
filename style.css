@@ -237,8 +237,9 @@ html {
 }
 
 .no-results {
-    color: #888;
-    font-size: 1.1em;
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
     margin-top: 20px;
     text-align: center;
     padding: 15px;
