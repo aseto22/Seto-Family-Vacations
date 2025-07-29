@@ -256,19 +256,6 @@ html {
 
 
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.bottom-text {
-    margin: 0; /* Remove default paragraph margin */
-}
-
-
-
 /* Styles for the input field itself, *inside* the container */
 #myInput {
     width: 100%;
