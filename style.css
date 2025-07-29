@@ -1,7 +1,10 @@
 /* This is a single line comment. Only works in css*/ 
 
 body {background-color: skyblue;
-     opacity: 100%;}
+      align-items: center;
+      opacity: 100%;
+     display: flex;
+     flex-direction: column;}
 h1 {color: #008a22;
    font-family: cambria;
    font-size: 60px;}
@@ -212,6 +215,9 @@ html {
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clear-button {
