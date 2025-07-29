@@ -215,24 +215,24 @@ html {
     /* You can add padding, borders, shadows, etc., to the container itself */
 } 
 
-/* Styles for the input field itself, *inside* the container 
+/* Styles for the input field itself, *inside* the container */
 #myInput {
-    width: 100%; /* Make the input fill its container 
-    padding: 12px 20px; /* Top/bottom and left/right padding 
+    width: 100%; /* Make the input fill its container */
+    padding: 12px 20px; /* Top/bottom and left/right padding */
     border: 1px solid #ccc;
-    border-radius: 25px; /* Rounded corners 
+    border-radius: 25px; /* Rounded corners */
     font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow 
-    outline: none; /* Remove default focus outline 
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 #myInput:focus {
-    border-color: #007bff; /* Blue border on focus 
-    box-shadow: 0 2px 8px rgba(0,123,255,0.2); /* More prominent shadow on focus 
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 2px 8px rgba(0,123,255,0.2); /* More prominent shadow on focus */
 }
 
-/* You would also style your ul and li elements here 
+/* You would also style your ul and li elements here */
 #myUL {
     list-style-type: none;
     padding: 0;
@@ -263,9 +263,10 @@ html {
 #myUL li a:hover {
     background-color: #f0f0f0;
     color: #007bff;
-}*/
+}
 
 /* Original code */
+/*
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 12px;
@@ -297,3 +298,4 @@ html {
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 } 
+*/
