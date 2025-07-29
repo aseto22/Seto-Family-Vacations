@@ -214,6 +214,41 @@ html {
     margin-bottom: 20px;
 }
 
+.clear-button {
+    position: absolute;
+    right: 15px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1; /* Ensure text baseline is correct */
+    z-index: 10; /* Ensure it's above the input if needed */
+}
+
+.clear-button:hover {
+    color: #555;
+}
+
+.no-results {
+    color: #888;
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 400px; /* Match search bar width */
+    width: 100%;
+    display: none; /* Keep it hidden by default */
+}
+
 /* Styles for the input field itself, *inside* the container */
 #myInput {
     width: 100%;
@@ -229,6 +264,11 @@ html {
 #myInput:focus {
     border-color: #007bff;
     box-shadow: 0 2px 8px rgba(0,123,255,0.2);
+
+    /* Previous padding: 12px 20px; */
+    padding: 12px 40px 12px 20px; /* Right padding for the 'X' button */
+    /* If you also have a search icon on the left, it would be: */
+    /* padding: 12px 40px 12px 40px; */
 }
 
 /* --- MODIFIED SECTIONS FOR 5 COLUMNS AND SMALLER BOXES --- */
