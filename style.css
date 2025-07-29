@@ -131,7 +131,19 @@ li a:hover {
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+/*.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;  #Important for vertical align on mobile phones 
+  margin: 0;  #Important for vertical align on mobile phones 
+} */
+
+/* Dropdown button */
+.dropdown a.dropbtn { /* <-- CHANGED THIS LINE */
   font-size: 16px;
   border: none;
   outline: none;
@@ -140,6 +152,12 @@ li a:hover {
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+
+  /* ADDED THESE LINES BELOW */
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 /* Add a red background color to navbar links on hover */
