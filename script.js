@@ -1,64 +1,65 @@
 // Get references to elements (these should be declared once globally)
 var myInput = document.getElementById("myInput");
-var clearButton = document.getElementById("clearSearch"); // Make sure your HTML has id="clearSearch" for the button
-var noResultsMessage = document.getElementById("noResultsMessage"); // Make sure your HTML has id="noResultsMessage" for the paragraph/div
+var clearButton = document.getElementById("clearSearch");
+var noResultsMessage = document.getElementById("noResultsMessage");
+var myUL = document.getElementById("myUL"); // Get a reference to your UL element
 
 // Main function to perform the search and filter list
 function myFunction() {
-    var filter, ul, li, a, i, txtValue;
+    var filter, li, a, i, txtValue; // 'ul' is now a global variable (myUL)
     var visibleCount = 0; // Counter for visible items
 
-    filter = myInput.value.toUpperCase(); // Use the global myInput reference
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
+    filter = myInput.value.toUpperCase();
+    li = myUL.getElementsByTagName("li"); // Use the global myUL reference
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = ""; // Show the item
+            li[i].style.display = ""; // Show the individual item
             visibleCount++; // Increment count if item is visible
         } else {
-            li[i].style.display = "none"; // Hide the item
+            li[i].style.display = "none"; // Hide the individual item
         }
     }
 
-    // --- NEW LOGIC FOR "NO RESULTS FOUND" MESSAGE ---
-    // Show/hide the "No results found" message based on visibleCount
+    // --- LOGIC FOR "NO RESULTS FOUND" MESSAGE AND HIDING/SHOWING THE UL ---
     if (visibleCount === 0) {
-        noResultsMessage.style.display = "block"; // Show the message
+        noResultsMessage.style.display = "block"; // Show the "No results found" message
+        myUL.style.display = "none"; // Hide the entire UL container
     } else {
-        noResultsMessage.style.display = "none"; // Hide the message
+        noResultsMessage.style.display = "none"; // Hide the "No results found" message
+        myUL.style.display = "flex"; // Show the UL container (use 'flex' as you styled it with flexbox)
     }
 
-    // --- NEW LOGIC FOR CLEAR BUTTON VISIBILITY ---
-    // Call the function to update clear button visibility
+    // --- LOGIC FOR CLEAR BUTTON VISIBILITY ---
     updateClearButton();
 }
 
-// --- NEW FUNCTION: Update the visibility of the clear button ---
+// Function to update the visibility of the clear button
 function updateClearButton() {
-    if (myInput.value.length > 0) {
-        clearButton.style.display = "block"; // Show button if input has text
-    } else {
-        clearButton.style.display = "none"; // Hide button if input is empty
+    if (clearButton) {
+        if (myInput.value.length > 0) {
+            clearButton.style.display = "block";
+        } else {
+            clearButton.style.display = "none";
+        }
     }
 }
 
-// --- NEW EVENT LISTENER: For the clear button click ---
-// Add an event listener to the clear button (should be done once on page load)
-clearButton.addEventListener("click", function() {
-    myInput.value = ""; // Clear the input field
-    myFunction();       // Re-run the search to show all items again and hide 'no results'
-    myInput.focus();    // Optionally put focus back on the input for convenience
-});
+// Event listener for the clear button
+if (clearButton) {
+    clearButton.addEventListener("click", function() {
+        myInput.value = "";
+        myFunction();
+        myInput.focus();
+    });
+}
 
-// --- NEW INITIALIZATION LOGIC: Run on page load ---
-// This ensures the initial state (e.g., clear button hidden, no results message hidden) is correct
-// when the page first loads, especially if the input field somehow has a pre-filled value.
+// Initializing state when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    myFunction(); // Execute myFunction once the DOM is fully loaded
+    myFunction();
 });
 
 
