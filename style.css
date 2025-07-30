@@ -12,12 +12,11 @@ h4 {color: cornsilk;
 h5 {color:black;
    font-size: 10px;}
 p {color: black;
-
   padding: 1px;
   margin: 1px;
   text-align: center;
   font-size: 125%;
-  width: 100%;}
+  width: 50%;}
 
 hr {
   border: 2px dashed red;
