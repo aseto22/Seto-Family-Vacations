@@ -16,7 +16,8 @@ p {color: black;
   padding: 1px;
   margin: 1px;
   text-align: center;
-  font-size: 125%;}
+  font-size: 125%;
+  width: 100%;}
 
 hr {
   border: 2px dashed red;
