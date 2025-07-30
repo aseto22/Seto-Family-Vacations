@@ -22,7 +22,7 @@ p {color: black;
           font-weight: bold;
           font-family: sans-serif;
           text-align: center;
-          text-opacity: 1;}
+          width: 100%;}
 
 hr {
   border: 2px dashed red;
