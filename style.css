@@ -21,9 +21,7 @@ p {color: black;
 .special {color: #000000;
           font-weight: bold;
           font-family: sans-serif;
-          text-align: center;
-      
-}
+          text-align: center;}
 
 hr {
   border: 2px dashed red;
@@ -268,6 +266,7 @@ html {
     align-items: flex-start; /* Aligns items to the start of the cross axis (top) */
     flex-wrap: wrap; /* Allows items to wrap to the next line if space is limited */
     gap: 20px; /* Adds space between boxes */
+    text-align: center;
 }
 
 .box {
