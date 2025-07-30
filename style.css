@@ -21,7 +21,8 @@ p {color: black;
 .special {color: #000000;
           font-weight: bold;
           font-family: sans-serif;
-          text-align: center;}
+          text-align: center;
+          text-opacity: 1;}
 
 hr {
   border: 2px dashed red;
