@@ -255,6 +255,36 @@ html {
 }
 
 
+.container {
+    display: flex; /* This is the key for Flexbox */
+    justify-content: space-around; /* Distributes space evenly around items */
+    align-items: flex-start; /* Aligns items to the start of the cross axis (top) */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if space is limited */
+    gap: 20px; /* Adds space between boxes */
+}
+
+.box {
+    flex: 1; /* Allows boxes to grow and shrink, taking equal space */
+    min-width: 200px; /* Minimum width to prevent boxes from becoming too small */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.box h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
 
 /* Styles for the input field itself, *inside* the container */
 #myInput {
