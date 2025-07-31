@@ -350,6 +350,7 @@ html {
     padding-bottom: 5px;
     width: 100%;
     font-size: 145%;
+    box-sizing: border-box;
 }
 
 
