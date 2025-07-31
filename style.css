@@ -1,5 +1,5 @@
 /* This is a single line comment. Only works in css*/ 
-/* Padding - The space between the content on the content's border */
+/* Padding - The space between the content and the content's border */
 /* Margin - The space between the outside border and other outside elements */
 
 body {background-color: skyblue;
@@ -320,6 +320,8 @@ html {
     border-radius: 25px;
     padding-top: 3px;
     padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 50px;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -343,6 +345,8 @@ html {
     color: #fff;
     font-weight: bold;
     text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 5px;
     width: 100%;
     font-size: 145%;
