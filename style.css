@@ -9,7 +9,7 @@ h1 {color: #008a22;
     font-family: cambria;
     font-size: 60px;}
 h2 {color: yellow;
-    font-family: open-sans;}
+    font-family: arial;}
 h3 {color: #6bdaff;}
 h4 {color: cornsilk;
     font-size: 125%;}
@@ -333,7 +333,7 @@ html {
      4px -4px 0 #000000,  /* Top-right shadow 
     -4px  4px 0 #000000,  /* Bottom-left shadow 
      4px  4px 0 #000000;  /* Bottom-right shadow */
-    -webkit-text-stroke: 1px #000000;
+    /* -webkit-text-stroke: 1px #000000; */
     text-align: center;
 }
 
