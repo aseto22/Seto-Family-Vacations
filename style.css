@@ -1,29 +1,31 @@
 /* This is a single line comment. Only works in css*/ 
 body {background-color: skyblue;
-      opacity: 100%;}
+    opacity: 100%;}
+
 h1 {color: #008a22;
-   font-family: cambria;
-   font-size: 60px;}
+    font-family: cambria;
+    font-size: 60px;}
 h2 {color: yellow;}
 h3 {color: #6bdaff;}
 h4 {color: cornsilk;
-   font-size: 125%;}
+    font-size: 125%;}
 h5 {color:black;
-   font-size: 10px;}
+    font-size: 10px;}
+
 p {color: black;
-  padding: 1px;
-  margin: 1px;
-  text-align: center;
-  font-size: 125%;
-  width: 50%;}
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+    font-size: 125%;
+    width: 50%;}
 
 .special {color: #000000;
-          font-weight: bold;
-          font-family: sans-serif;
-          text-align: center;
-          width: 100%;
-          margin-top: 5px;
-          padding-top: 5px;}
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+  padding-top: 5px;}
 
 hr {
   border: 2px dashed red;
