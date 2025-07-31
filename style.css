@@ -39,6 +39,7 @@ p {color: black;
     height: 100%;
     background-color: skyblue;
     display: flex; /* Use flexbox to easily center content */
+    flex-direction: column;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     z-index: 1000; /* Ensure it's on top of everything else */
