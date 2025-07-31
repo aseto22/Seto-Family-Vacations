@@ -86,6 +86,26 @@ function checkPassword() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // ... (your existing DOMContentLoaded code) ...
+
+    // Get a reference to the password input field
+    var passwordInput = document.getElementById("passwordInput");
+
+    // Check if the passwordInput element exists before adding the event listener
+    if (passwordInput) {
+        // Add an event listener for the 'keypress' event on the password input
+        passwordInput.addEventListener("keypress", function(event) {
+            // Check if the key pressed was the "Enter" key (key code 13)
+            if (event.key === "Enter") {
+                // Prevent the default action (e.g., submitting a form, which we don't have here)
+                event.preventDefault();
+                // Call your checkPassword function
+                checkPassword();
+            }
+        });
+    }
+});
 
 // Old Code
 /* function myFunction() {
