@@ -62,6 +62,30 @@ document.addEventListener("DOMContentLoaded", function() {
     myFunction();
 });
 
+// Password Code //
+function checkPassword() {
+    // 1. Get the password entered by the user
+    var enteredPassword = document.getElementById('passwordInput').value;
+    // 2. Get the error message element
+    var errorMessage = document.getElementById('errorMessage');
+
+    // IMPORTANT: Replace 'yourpassword' with your actual password
+    // 3. Compare the entered password with the correct password
+    if (enteredPassword === "Seto123") {
+        // 4. If correct:
+        //    a. Hide the password overlay
+        document.getElementById('password-overlay').style.display = 'none';
+        //    b. Show the main content
+        document.getElementById('content').style.display = 'block';
+    } else {
+        // 5. If incorrect:
+        //    a. Show the error message
+        errorMessage.style.display = 'block';
+        //    b. Clear the password input field for the next attempt
+        document.getElementById('passwordInput').value = '';
+    }
+}
+
 
 // Old Code
 /* function myFunction() {
