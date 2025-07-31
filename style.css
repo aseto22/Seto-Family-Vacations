@@ -40,9 +40,9 @@ p {color: black;
     background-color: skyblue;
     display: flex; /* Use flexbox to easily center content */
     flex-direction: column;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
     z-index: 1000; /* Ensure it's on top of everything else */
+    align-items: flex-start; /* Aligns content to the top of the container */
+    height: 100vh;
         }
 
 .password-box {
