@@ -269,6 +269,7 @@ html {
     column-gap: 20px; /* Adds space between boxes */
     row-gap: 20px;
     text-align: center;
+    width: 90%;
 }
 
 .box {
