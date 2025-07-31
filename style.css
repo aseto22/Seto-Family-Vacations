@@ -275,8 +275,8 @@ html {
     flex: 1; /* Allows boxes to grow and shrink, taking equal space */
     min-width: 200px; /* Minimum width to prevent boxes from becoming too small */
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 5px solid #000000; /* How thick the border is and what color the border is */
+    border-radius: 25px; /* Creates rounded edges to the box */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -289,7 +289,7 @@ html {
 }
 
 .box p {
-    color: #666;
+    color: #000000;
     line-height: 1.6;
     text-align: center;
 }
