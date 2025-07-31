@@ -42,6 +42,7 @@ p {color: black;
     flex-direction: column;
     z-index: 1000; /* Ensure it's on top of everything else */
     align-items: center; 
+    text-align: center;
     height: 100vh;
         }
 
