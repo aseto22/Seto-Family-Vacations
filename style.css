@@ -21,7 +21,9 @@ p {color: black;
           font-weight: bold;
           font-family: sans-serif;
           text-align: center;
-          width: 100%;}
+          width: 100%;
+          margin-top: 0;
+          padding-top: 0;}
 
 hr {
   border: 2px dashed red;
@@ -286,6 +288,8 @@ html {
 .box h3 {
     color: #000000;
     margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
     text-align: center;
     font-weight: bold;
     font-size: 150%;
@@ -295,6 +299,8 @@ html {
 .box p {
     color: #000000;
     line-height: 1.6;
+    margin-top: 0;
+    padding-top: 0;
     text-align: center;
     font-size: 110%;
 }
