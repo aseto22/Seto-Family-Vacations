@@ -312,7 +312,7 @@ html {
     background-color: #fff;
     border: 5px solid #000000;
     border-radius: 25px;
-    top-padding: 5px;
+    padding-top: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 50%;
