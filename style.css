@@ -315,7 +315,7 @@ html {
 .border {
     flex: 1;
     min-width: 200px;
-    background-color: #fff;
+    background-color: ##a3a3a3;
     border: 5px solid #000000;
     border-radius: 25px;
     padding-top: 3px;
@@ -335,7 +335,7 @@ html {
      4px  4px 0 #000000;  /* Bottom-right shadow */
     /* -webkit-text-stroke: 1px #000000; */
     text-align: center;
-    color: #ffa500;
+    color: yellow;
     font-size: 200%;
 }
 
