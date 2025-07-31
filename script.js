@@ -128,12 +128,24 @@ function checkAccessOnLoad() {
         if (passwordOverlay) passwordOverlay.style.display = 'none';
         if (content) content.style.display = 'block';
     } else {
-        // If not, ensure the overlay is visible and content is hidden
-        // Only show the overlay if it exists (i.e., on pages meant to be password protected)
-        if (passwordOverlay) passwordOverlay.style.display = 'flex'; // Use flex to center the box
-        if (content) content.style.display = 'none';
+        // If access has NOT been granted:
+        // Check if the current page is the index page.
+        // We do this to prevent a redirect loop.
+        const isIndexPage = window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html');
+
+        if (!isIndexPage) {
+            // If the user is on any page other than index.html,
+            // redirect them back to the index page.
+            window.location.href = 'index.html';
+        } else {
+            // If they are on the index page, show the password overlay.
+            if (passwordOverlay) passwordOverlay.style.display = 'flex'; // Use flex to center the box
+            if (content) content.style.display = 'none';
+        }
     }
 }
+
+
 // 9. REPLACE YOUR EXISTING DOMContentLoaded BLOCK with this combined one.
 //    This new block ensures checkAccessOnLoad runs first, then search functions.
 document.addEventListener("DOMContentLoaded", function() {
