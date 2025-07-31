@@ -318,7 +318,7 @@ html {
     width: 50%;
 }
 
-.border h3 {
+.border h2 {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.9); /* No offset, significant blur, black, opaque */
     text-align: center;
 }
