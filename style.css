@@ -84,8 +84,6 @@ p {color: black;
 }
 
 
-
-
 hr {
   border: 2px dashed red;
 }
@@ -98,6 +96,7 @@ img {
 marquee {
   font-size: 200%;
   font-weight: bold;
+  margin-bottom: 0px;
 }
 
 #para1 {color: purple;
