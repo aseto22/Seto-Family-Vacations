@@ -320,7 +320,7 @@ html {
 }
 
 .border h2 {
-    text-shadow: 0 0 15px rgba(0, 0, 0, 1); /* No offset, significant blur, black, opaque */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0); /* No offset, significant blur, black, opaque */
     text-align: center;
 }
 
