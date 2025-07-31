@@ -8,7 +8,7 @@ body {background-color: skyblue;
 h1 {color: #008a22;
     font-family: cambria;
     font-size: 60px;}
-h2 {color: #yellow;
+h2 {color: yellow;
     font-family: arial;}
 h3 {color: #6bdaff;}
 h4 {color: cornsilk;
@@ -335,7 +335,7 @@ html {
      4px  4px 0 #000000;  /* Bottom-right shadow */
     /* -webkit-text-stroke: 1px #000000; */
     text-align: center;
-    color: ffd700;
+    color: #ffd700;
     font-size: 110%;
 }
 
