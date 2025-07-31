@@ -306,6 +306,17 @@ html {
 }
 
 
+.border {
+    flex: 1;
+    min-width: 200px;
+    background-color: transparent;
+    border: 5px solid #000000;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
 
 /* Styles for the input field itself, *inside* the container */
 #myInput {
