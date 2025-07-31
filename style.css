@@ -8,7 +8,8 @@ body {background-color: skyblue;
 h1 {color: #008a22;
     font-family: cambria;
     font-size: 60px;}
-h2 {color: yellow;}
+h2 {color: yellow;
+    font-family: open-sans;}
 h3 {color: #6bdaff;}
 h4 {color: cornsilk;
     font-size: 125%;}
