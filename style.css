@@ -87,6 +87,10 @@ p {color: black;
   text-align: center;
 }
 
+.bottom {
+    margin-bottom: 100px;
+}
+
 #content {
     display: none; /* KEY: This makes your actual website content hidden by default */
     padding: 20px;
