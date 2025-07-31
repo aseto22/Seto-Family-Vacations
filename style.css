@@ -78,6 +78,13 @@ p {color: black;
     margin-top: 12px;
 }
 
+#errorMessage {
+  color: red;
+  display: none;
+  family-font: arial;
+  text-align: center;
+}
+
 #content {
     display: none; /* KEY: This makes your actual website content hidden by default */
     padding: 20px;
