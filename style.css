@@ -1,4 +1,7 @@
 /* This is a single line comment. Only works in css*/ 
+/* Padding - The space between the content on the content's border */
+/* Margin - The space between the outside border and other outside elements */
+
 body {background-color: skyblue;
     opacity: 100%;}
 
