@@ -41,7 +41,7 @@ p {color: black;
     display: flex; /* Use flexbox to easily center content */
     flex-direction: column;
     z-index: 1000; /* Ensure it's on top of everything else */
-    align-items: flex-start; /* Aligns content to the top of the container */
+    align-items: center; 
     height: 100vh;
         }
 
