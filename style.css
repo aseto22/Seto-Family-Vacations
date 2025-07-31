@@ -34,6 +34,7 @@ img {
 
 marquee {
   font-size: 200%;
+  font-weight: bold;
 }
 
 #para1 {color: purple;
