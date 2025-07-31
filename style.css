@@ -9,7 +9,8 @@ h1 {color: #008a22;
     font-family: cambria;
     font-size: 60px;}
 h2 {color: yellow;
-    font-family: arial;}
+    font-family: arial;
+    font-size: 25px;}
 h3 {color: #6bdaff;}
 h4 {color: cornsilk;
     font-size: 125%;}
@@ -21,6 +22,7 @@ p {color: black;
     margin: 1px;
     text-align: center;
     font-size: 145%;
+    font-weight: bold;
     width: 50%;}
 
 .special {color: #000000;
