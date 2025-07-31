@@ -328,10 +328,10 @@ html {
 .border h2 {
     /* text-shadow: 0 0 25px rgba(0, 0, 0, 1); /* No offset, significant blur, black, opaque */
     text-shadow: 
-    -1px -1px 0 #000000,  /* Top-left shadow */
-     1px -1px 0 #000000,  /* Top-right shadow */
-    -1px  1px 0 #000000,  /* Bottom-left shadow */
-     1px  1px 0 #000000;  /* Bottom-right shadow */
+    -4px -4px 0 #000000,  /* Top-left shadow */
+     4px -4px 0 #000000,  /* Top-right shadow */
+    -4px  4px 0 #000000,  /* Bottom-left shadow */
+     4px  4px 0 #000000;  /* Bottom-right shadow */
     text-align: center;
 }
 
