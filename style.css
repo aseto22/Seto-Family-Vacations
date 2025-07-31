@@ -74,6 +74,10 @@ p {color: black;
     background-color: #0056b3;
 }
 
+.password-box h2 {
+    margin-top: 15px;
+}
+
 #content {
     display: none; /* KEY: This makes your actual website content hidden by default */
     padding: 20px;
