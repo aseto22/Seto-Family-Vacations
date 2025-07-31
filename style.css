@@ -283,15 +283,19 @@ html {
 }
 
 .box h3 {
-    color: #333;
+    color: #000000;
     margin-top: 0;
     text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    
 }
 
 .box p {
     color: #000000;
     line-height: 1.6;
     text-align: center;
+    font-size: 90%;
 }
 
 
