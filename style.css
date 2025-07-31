@@ -83,7 +83,7 @@ p {color: black;
 #errorMessage {
   color: red;
   display: none;
-  family-font: arial;
+  font-family: arial;
   text-align: center;
 }
 
