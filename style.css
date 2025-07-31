@@ -332,7 +332,7 @@ html {
      4px -4px 0 #000000,  /* Top-right shadow 
     -4px  4px 0 #000000,  /* Bottom-left shadow 
      4px  4px 0 #000000;  /* Bottom-right shadow */
-    -webkit-text-stroke: 3px #000000;
+    -webkit-text-stroke: 1px #000000;
     text-align: center;
 }
 
