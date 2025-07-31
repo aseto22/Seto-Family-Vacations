@@ -336,7 +336,7 @@ html {
     -4px  4px 0 #000000,  /* Bottom-left shadow 
      4px  4px 0 #000000;  /* Bottom-right shadow */
     /* -webkit-text-stroke: 1px #000000; */
-    margin-top: 5px;
+    margin-top: 8px;
     margin-bottom: 5px;
     text-align: center;
     color: yellow;
@@ -348,6 +348,7 @@ html {
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
+    margin-bottom: 3px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
