@@ -1,3 +1,6 @@
+const SESSION_STORAGE_KEY = "setoFamilyVacationsAccessGranted";
+const CORRECT_PASSWORD = "Seto123"; // Make sure this matches your desired password!
+
 // Get references to elements (these should be declared once globally)
 var myInput = document.getElementById("myInput");
 var clearButton = document.getElementById("clearSearch");
@@ -9,6 +12,12 @@ function myFunction() {
     var filter, li, a, i, txtValue; // 'ul' is now a global variable (myUL)
     var visibleCount = 0; // Counter for visible items
 
+// 2. IMPORTANT: Add this check to prevent errors if search elements aren't on the current page.
+    if (!myInput || !myUL) {
+        // console.warn("Search elements not found. Skipping search functionality."); // Optional: uncomment for debugging
+        return; // Exit if elements aren't present (e.g., on index.html)
+    }
+    
     filter = myInput.value.toUpperCase();
     li = myUL.getElementsByTagName("li"); // Use the global myUL reference
 
@@ -26,20 +35,23 @@ function myFunction() {
 
     // --- LOGIC FOR "NO RESULTS FOUND" MESSAGE AND HIDING/SHOWING THE UL ---
     if (visibleCount === 0) {
-        noResultsMessage.style.display = "block"; // Show the "No results found" message
+        // 3. Add a check for noResultsMessage here
+        if (noResultsMessage) noResultsMessage.style.display = "block"; // Show the "No results found" message
         myUL.style.display = "none"; // Hide the entire UL container
     } else {
-        noResultsMessage.style.display = "none"; // Hide the "No results found" message
+        // 4. Add a check for noResultsMessage here
+        if (noResultsMessage) noResultsMessage.style.display = "none"; // Hide the "No results found" message
         myUL.style.display = "flex"; // Show the UL container (use 'flex' as you styled it with flexbox)
     }
-
+    
     // --- LOGIC FOR CLEAR BUTTON VISIBILITY ---
     updateClearButton();
 }
 
 // Function to update the visibility of the clear button
 function updateClearButton() {
-    if (clearButton) {
+    // 5. Add checks for clearButton and myInput here
+    if (clearButton && myInput) { // Ensure both elements exist
         if (myInput.value.length > 0) {
             clearButton.style.display = "block";
         } else {
@@ -49,18 +61,24 @@ function updateClearButton() {
 }
 
 // Event listener for the clear button
+// 6. Add a check for clearButton here
 if (clearButton) {
     clearButton.addEventListener("click", function() {
-        myInput.value = "";
-        myFunction();
-        myInput.focus();
+        // 7. Add a check for myInput here
+        if (myInput) { // Check if myInput exists
+            myInput.value = "";
+            myFunction();
+            myInput.focus();
+        }
     });
 }
 
+/* 
 // Initializing state when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     myFunction();
 });
+*/
 
 // Password Code //
 function checkPassword() {
@@ -70,38 +88,73 @@ function checkPassword() {
     var errorMessage = document.getElementById('errorMessage');
 
     // IMPORTANT: Replace 'yourpassword' with your actual password
-    // 3. Compare the entered password with the correct password
-    if (enteredPassword === "Seto123") {
+    // 3. Change 'yourpassword' to the CORRECT_PASSWORD constant
+    // 4. Also add element existence checks
+    if (enteredPassword === CORRECT_PASSWORD) {
         // 4. If correct:
         //    a. Hide the password overlay
-        document.getElementById('password-overlay').style.display = 'none';
+        var passwordOverlay = document.getElementById('password-overlay'); // Get reference here
+        if (passwordOverlay) passwordOverlay.style.display = 'none';
+
         //    b. Show the main content
-        document.getElementById('content').style.display = 'block';
+        var content = document.getElementById('content'); // Get reference here
+        if (content) content.style.display = 'block';
+
+        // 5. ADD THIS LINE: Store in sessionStorage that access has been granted
+        sessionStorage.setItem(SESSION_STORAGE_KEY, "true");
+
     } else {
         // 5. If incorrect:
         //    a. Show the error message
-        errorMessage.style.display = 'block';
+        // 6. Add an element existence check
+        if (errorMessage) errorMessage.style.display = 'block';
         //    b. Clear the password input field for the next attempt
-        document.getElementById('passwordInput').value = '';
+        // 7. Add an element existence check
+        if (document.getElementById('passwordInput')) {
+            document.getElementById('passwordInput').value = '';
+        }
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // ... (your existing DOMContentLoaded code) ...
+// 8. ADD THIS ENTIRE NEW FUNCTION: checkAccessOnLoad
+//    This function checks sessionStorage and controls initial visibility.
+function checkAccessOnLoad() {
+    var accessGranted = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    var passwordOverlay = document.getElementById('password-overlay');
+    var content = document.getElementById('content');
 
-    // Get a reference to the password input field
+    if (accessGranted === "true") {
+        // If access was granted, hide the overlay and show content
+        if (passwordOverlay) passwordOverlay.style.display = 'none';
+        if (content) content.style.display = 'block';
+    } else {
+        // If not, ensure the overlay is visible and content is hidden
+        // Only show the overlay if it exists (i.e., on pages meant to be password protected)
+        if (passwordOverlay) passwordOverlay.style.display = 'flex'; // Use flex to center the box
+        if (content) content.style.display = 'none';
+    }
+}
+// 9. REPLACE YOUR EXISTING DOMContentLoaded BLOCK with this combined one.
+//    This new block ensures checkAccessOnLoad runs first, then search functions.
+document.addEventListener("DOMContentLoaded", function() {
+    // Call checkAccessOnLoad first to set initial visibility based on session storage
+    checkAccessOnLoad();
+
+    // Now call myFunction for search functionality, but only if search elements exist
+    // This prevents errors on index.html where myInput/myUL might not be present immediately
+    if (document.getElementById("myInput") && document.getElementById("myUL")) {
+        myFunction();
+    }
+
+    // 10. ADD THIS NEW EVENT LISTENER FOR THE ENTER KEY on the password input field
     var passwordInput = document.getElementById("passwordInput");
 
-    // Check if the passwordInput element exists before adding the event listener
-    if (passwordInput) {
-        // Add an event listener for the 'keypress' event on the password input
+    if (passwordInput) { // Ensure passwordInput exists
         passwordInput.addEventListener("keypress", function(event) {
-            // Check if the key pressed was the "Enter" key (key code 13)
+            // Check if the key pressed was the "Enter" key
             if (event.key === "Enter") {
-                // Prevent the default action (e.g., submitting a form, which we don't have here)
-                event.preventDefault();
-                // Call your checkPassword function
-                checkPassword();
+                event.preventDefault(); // Prevent default form submission behavior
+                checkPassword(); // Call your password checking function
             }
         });
     }
