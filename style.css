@@ -35,12 +35,14 @@ h3.notable {
 	color: #000000;
 	font-weight: bold;
 	margin-bottom: 0px;
+	font-size: 200%;
 }
 
 h4.notable {
 	color: #640b80;
 	font-weight: bold;
 	margin-top: 0px;
+	font-size: 110%;
 }
 
 
