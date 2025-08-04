@@ -37,6 +37,12 @@ h3.notable {
 	margin-bottom: 0px;
 }
 
+h4.notable {
+	color: #640b80;
+	font-weight: bold;
+	margin-top: 0px;
+}
+
 
 .special {color: #000000;
   font-weight: bold;
