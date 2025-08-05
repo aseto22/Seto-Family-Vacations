@@ -1,5 +1,5 @@
 const SESSION_STORAGE_KEY = "setoFamilyVacationsAccessGranted";
-const CORRECT_PASSWORD = "ASeto2268!"; // Make sure this matches your desired password!
+const CORRECT_PASSWORD = "lovegoodtripbruh"; // Make sure this matches your desired password!
 
 // Get references to elements (these should be declared once globally)
 var myInput = document.getElementById("myInput");
