@@ -146,12 +146,11 @@ and css. */
 /* unvisited link */
 a:link {
   color: gold;
-  font-size: 200%;
 }
 
 /* visited link */
 a:visited {
-  color: white;
+  color: #000000;
 }
 
 /* mouse over link */
