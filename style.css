@@ -146,21 +146,25 @@ and css. */
 /* unvisited link */
 a:link {
   color: gold;
+  font-size: 16px;
 }
 
 /* visited link */
 a:visited {
   color: #000000;
+  font-size: 16px;
 }
 
 /* mouse over link */
 a:hover {
   color: hotpink;
+  font-size: 16px;
 }
 
 /* selected link */
 a:active {
   color: blue;
+  font-size: 16px;
 }
 
 ul {
