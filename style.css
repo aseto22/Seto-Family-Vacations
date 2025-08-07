@@ -166,6 +166,10 @@ a:active {
   color: blue;
 }
 
+.space {
+	margin: 12px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
