@@ -143,6 +143,9 @@ different
 for html
 and css. */
 
+a {
+  font-size: 16px;
+}
 /* unvisited link */
 a:link {
   color: gold;
