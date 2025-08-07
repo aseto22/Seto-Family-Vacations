@@ -145,6 +145,7 @@ and css. */
 
 a {
   font-size: 20px;
+  margin: 5px;
 }
 /* unvisited link */
 a:link {
